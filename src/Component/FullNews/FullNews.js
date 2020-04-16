@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import {withRouter} from 'react-router-dom';
+// import {withRouter} from 'react-router-dom';
 
 const FullNews = (props) => {
     console.log(props)
@@ -19,10 +19,10 @@ const FullNews = (props) => {
 
     return (
         <div>
-            <h2>hello</h2>
+            <h2>Hello</h2>
         </div>
     )
 }
 
 
-export default withRouter(FullNews);
+export default FullNews;

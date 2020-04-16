@@ -23,10 +23,10 @@ const News = (props) => {
 
     console.log(news)
 
-    const fetchNewsDetail = (index) => {
-        console.log(index)
-        // props.history.push('/' + index)
-    }
+    // const fetchNewsDetail = (index) => {
+    //     console.log(index)
+    //     // props.history.push('/' + index)
+    // }
     if(loading) {
         return <div>The page is loading</div>
     }
@@ -36,7 +36,7 @@ const News = (props) => {
                 <h1>Coronavirus News</h1>
             </header>
             <main>
-                <NewsList news={news} fetchNewsDetail={fetchNewsDetail}/>
+                <NewsList news={news} />
             </main>
         </React.Fragment>
     )

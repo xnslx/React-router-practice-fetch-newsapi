@@ -15,7 +15,7 @@ const NewsList = (props) => {
                                     to={'/' + item.index}
                                     src={item.urlToImage} 
                                     alt="newsImage" 
-                                    onClick={() => props.fetchNewsDetail(index)}
+                                    onClick={() => props.history.push('/' + index)}
                                     style = {{width:'90%', height: 'auto'}}
                                 />
                                 <h2>{item.title}</h2>
@@ -25,7 +25,7 @@ const NewsList = (props) => {
                         </Link>
                     )
             })}
-            <Route path={props.match.url + '/:index'} exact component={FullNews}/>
+            <Route path={props.match.parmas + '/:index'} exact component={FullNews}/>
         </div>
     )
 }

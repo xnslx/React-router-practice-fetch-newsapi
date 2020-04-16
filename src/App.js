@@ -10,9 +10,6 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          <News />
-        </div>
         <Switch>
           <Route path='/' exact component={News}/>
           <Route path='/:index' exact component={FullNews}/>
