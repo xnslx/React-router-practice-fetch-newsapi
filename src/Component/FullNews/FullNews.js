@@ -11,15 +11,14 @@ const FullNews = (props) => {
         if(props.match.params.index) {
             axios.get('/' + props.match.params.index)
             .then(res => {
-                loadedNews(res.data.articles);
+                setLoadedNews({loadedNews: res.data.articles});
             })
         }
     },[])
 
-
     return (
         <div>
-            <h2>Hello</h2>
+            <h2>This is News {props.match.params.index}</h2>
         </div>
     )
 }
