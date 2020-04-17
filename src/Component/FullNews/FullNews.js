@@ -6,15 +6,25 @@ import axios from 'axios';
 const FullNews = (props) => {
     console.log(props)
     const [loadedNews, setLoadedNews] = useState();
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        if(props.match.params.index) {
-            axios.get('/' + props.match.params.index)
-            .then(res => {
-                setLoadedNews({loadedNews: res.data.articles});
-            })
+        const fetchFullNews = async() => {
+            setLoading(true);
+            const res = await axios.get('/' + props.match.params.index)
+            setLoadedNews({loadedNews:res.data})
+            setLoading(false)
         }
+        fetchFullNews()
+        // if(props.match.params.index) {
+        //     axios.get('/' + props.match.params.index)
+        //     .then(res => {
+        //         setLoadedNews({loadedNews: res.data.articles});
+        //     })
+        // }
     },[])
+
+    // console.log(loadedNews)
 
     return (
         <div>
