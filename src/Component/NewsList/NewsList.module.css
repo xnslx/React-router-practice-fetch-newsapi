@@ -1,0 +1,20 @@
+.Container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Item {
+    margin-bottom: 80px;
+}
+
+.Item img {
+    width: 100%;
+}
+
+.Item h6 {
+    margin-top: -8px;
+}

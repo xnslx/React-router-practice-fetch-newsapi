@@ -2,9 +2,9 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 // import {Route, Link, Switch} from 'react-router-dom';
-import FullNews from '../FullNews/FullNews';
+// import FullNews from '../FullNews/FullNews';
 import NewsList from '../NewsList/NewsList';
-import {withRouter, Route, Link} from 'react-router-dom';
+
 
 const News = (props) => {
     console.log(props)
@@ -21,22 +21,21 @@ const News = (props) => {
         fetchNews();
     }, []) 
 
-    // console.log(news)
+    console.log(news)
 
-    const fetchNewsDetail = (index) => {
-        // console.log(index)
-        props.history.push('/' + index)
-    }
+    // const fetchNewsDetail = (index) => {
+    //     props.history.push('/' + index)
+    // }
     if(loading) {
         return <div>The page is loading</div>
     }
     return (
         <React.Fragment>
             <header>
-                <h1>Coronavirus News</h1>
+                <h1 style={{textAlign: 'center'}}>Coronavirus News</h1>
             </header>
             <main>
-                <NewsList news={news} fetchNewsDetail={fetchNewsDetail}/>
+                <NewsList news={news} />
             </main>
         </React.Fragment>
     )
