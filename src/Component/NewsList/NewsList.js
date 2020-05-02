@@ -1,6 +1,6 @@
 import React from 'react';
-import {withRouter, Link, Route} from 'react-router-dom';
-import FullNews from '../FullNews/FullNews';
+import {Link} from 'react-router-dom';
+// import FullNews from '../FullNews/FullNews';
 import classes from './NewsList.module.css';
 
 const NewsList = (props) => {
